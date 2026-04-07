@@ -37,7 +37,6 @@ text
 ```java
 public abstract class AbstractMenuController<T extends Enum<T>> {
     public final void runMenu() { 
-        // общая логика вывода меню и чтения ввода
     }
     protected abstract void processSelectedOption(T option);
     protected abstract boolean isExitOption(T option);
@@ -114,7 +113,7 @@ public class Account implements Serializable {
     private Long id;
     private String name;
     private double balance;
-    private String currency;  // RUB, USD, EUR
+    private String currency;  
 }
 Transaction
 java
@@ -122,8 +121,8 @@ public class Transaction implements Serializable {
     private Long id;
     private Long accountId;
     private LocalDate date;
-    private double amount;      // положительный — доход, отрицательный — расход
-    private String category;    // Food, Transport, Salary, Entertainment
+    private double amount;      
+    private String category;    
     private String description;
 }
 
